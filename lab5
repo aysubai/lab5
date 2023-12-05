@@ -1,0 +1,25 @@
+import random
+lst = [ ]
+k=0
+for i in range(10):
+    number = random.randint(0, 101) 
+    lst = lst + [number]
+print("lst = ", lst)
+f = open('file.txt', 'w')
+s=str(len(lst))
+f.write(s + '\n')
+for i in lst:
+    s = str(i) 
+    f.write(s + ' ')
+f.close()
+f=open('file.txt','r')
+s=f.readline()
+lst2=[ ]
+for s in lst:
+        if s% 2 == 1:
+            lst2=lst2+[int(s)]
+print('lst2=',lst2)
+for k in lst2:
+  s=s+k
+print("Cem",s)
+f.close()
